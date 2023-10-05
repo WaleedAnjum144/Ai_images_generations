@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Lato:wght@300&family=Montserrat:wght@500&family=Poppins&family=Roboto&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.image-container {
+    height: 60vh;
+    background: url(bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.image-container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #000;
+}
+
+.image-container .content {
+    color: #fff;
+    padding: 0 15px;
+    max-width: 760px;
+    text-align: center;
+    position: relative;
+}
+
+.image-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.image-container p {
+    font-size: 1.35rem;
+    margin-top: 10px;
+}
+
+.generate-form {
+    height: 56px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 0 15px;
+}
+
+.generate-form .prompt-input {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+}
+
+.generate-form .controls {
+    display: flex;
+    height: 100%;
+    gap: 15px;
+    
+}
+
+.controls .img-quantity {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background: none;
+    cursor: pointer;
+
+}
+
+.controls .generate-btn {
+    outline: none;
+    border: none;
+    background-color: #4949e7;
+    padding: 0px 25px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* Gallary section  */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 1250px;
+    margin: 50px auto;
+}
+
+.image-gallery .img-card {
+    width: 285px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: #f2f2f2;
+
+}
+
+
+.image-gallery .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.image-gallery .img-card.loading img {
+    width: 80px;
+    height: 80px;
+}
+
+.image-gallery .img-card .download-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.image-gallery .img-card:not(.loading):hover .download-btn {
+    display: flex;
+}
+
+.image-gallery .img-card .download-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* Media queries  */
+
+@media screen and (max-width:768px) {
+    .image-container {
+        height: 60vh ;
+    
+     
+    }
+
+    .image-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-container p {
+        font-size: 1rem;
+    }
+
+    .generate-form {
+        margin-top: 30px;
+        height: 50px;
+        display: block;
+    }
+
+    .generate-form .controls {
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: end;
+    }
+    .generate-form .controls .img-quantity{
+        color: #fff;
+    }
+    .generate-form  .image-quantity option{
+       
+        color: #000000;
+    }
+
+    .generate-form .generate-btn{
+        height: 100%;
+    }
+
+    .image-gallery .img-card:not(.loading):hover .download-btn {
+        display: flex;
+    }
+    
+
+    .image-gallery{
+        margin-top: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:500px){
+    .image-gallery .img-card {
+      /* width: calc(800px - 100%) */
+      width: 100%;
+    
+    }
+
+}
