@@ -18,7 +18,7 @@ function handleDownload(event){
 
 }
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 
 // PLacing the images 
 

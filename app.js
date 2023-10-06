@@ -20,7 +20,7 @@ function handleDownload(event) {
 
 
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 
 // Displayinh the ai generated images to our gallary 
 
